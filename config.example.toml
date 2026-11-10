@@ -1,0 +1,39 @@
+# QQ 机器人配置
+[qq]
+# 开放平台管理端获得的机器人票据
+app_id = ""
+app_secret = ""
+# OpenAPI 统一地址
+api_base = "https://api.bot.qq.com"
+# 订阅事件位掩码：1 << 25 = GROUP_AND_C2C_EVENT（私聊 + 群聊）
+intents = 33554432
+
+# 本地 HTTP 服务
+[server]
+host = "0.0.0.0"
+port = 8000
+
+# 本地推送接口的调用鉴权 token，支持多个（任一匹配即通过）
+[auth]
+# 推荐：token 列表
+tokens = ["token1", "token2"]
+# 兼容：单个 token（与 tokens 合并生效）
+# token = ""
+
+# WebSocket 网关
+[gateway]
+# 连接失败后的重试间隔（秒）
+retry_seconds = 5
+
+# 日志
+[logging]
+level = "INFO"
+file = "logs/bot.log"
+
+# 名字 -> ID 映射：openid/touid 传入名字时自动替换为对应 ID
+[names]
+# shingyu = "0000xxxxxxx"
+
+# 名字 -> 图片链接映射：图文卡片的 pic_url 传入名字时自动替换
+[picurls]
+# gmail = "https://xxgmail-square-pad.webp"

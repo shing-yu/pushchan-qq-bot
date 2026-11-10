@@ -1,0 +1,10 @@
+.idea/
+.venv/
+__pycache__/
+*.pyc
+logs/
+config.toml
+uv.lock
+testdata/
+*.service
+*.zip
